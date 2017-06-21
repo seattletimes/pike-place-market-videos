@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <%= t.include("partials/_head.html", grunt.data.json) %>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+
+    <responsive-child>
+
+      <div class="intro">
+        <h1>Closer look at the Market</h1>
+        <div class="chatter">Click on a location to see a 360-degree video of what's there.</div>
+      </div>
+
+      <div class="map">
+        <img class="backdrop" src="./assets/market-expansion.jpg">
+        <div class="points">
+          <% json.pikeplace.forEach(function(m) { %>
+          <div class="dot" style="left: <%= m.x %>%; top: <%= m.y %>%" data-youtube="<%= m.video %>">
+          <%= m.loc %>
+          </div>
+          <% }) %>
+        </div>
+
+        <div class="lightbox">
+          <span class="close">&times;</span>
+          <div class="video">
+            <iframe src="" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="list">
+        <% json.pikeplace.forEach(function(m) { %>
+          <div class="list-item" data-youtube="<%= m.video %>">
+          <span class="list-location"><%= m.loc %></span> <%= m.place %>
+          </div>
+        <% }) %>
+      </div>
+    </responsive-child>
+
+    <script src="app.js" async></script>
+    <% if (json.project.production) { %>
+    <%= !json.project.embedded ? t.include("partials/_foot.html") : "" %>
+    <%= t.include("partials/_workHere.html") %>
+    <% } %>
+  </body>
+</html>

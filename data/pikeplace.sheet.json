@@ -1,0 +1,51 @@
+[
+  {
+    "loc": 1,
+    "video": "VfMCLHJ_dpU",
+    "x": 30,
+    "y": 15,
+    "place": "Sosio's Veggie Stand"
+  },
+  {
+    "loc": 2,
+    "video": "th4gYOTr_jA",
+    "x": 20,
+    "y": 55,
+    "place": "Athenian Restaurant"
+  },
+  {
+    "loc": 3,
+    "video": "Nh_K0SNDfrg",
+    "x": 55,
+    "y": 20,
+    "place": "Fish throw"
+  },
+  {
+    "loc": 4,
+    "video": "lFZKf-cVR9I",
+    "x": 60,
+    "y": 80,
+    "place": "Pike Place Piano"
+  },
+  {
+    "loc": 5,
+    "video": "G9mAA1xyUYw",
+    "x": 10,
+    "y": 30,
+    "place": "New development stairs"
+  },
+  {
+    "loc": 6,
+    "video": "Z7wGVP6Smdo",
+    "x": 4,
+    "y": 33,
+    "place": "New development exterior"
+  },
+  {
+    "loc": 7,
+    "video": "F2tKAbcoJqc",
+    "x": 60,
+    "y": 45,
+    "place": "New development interior"
+  }
+]
