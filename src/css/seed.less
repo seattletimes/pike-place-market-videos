@@ -49,11 +49,11 @@ main.interactive {
   .flex(0 0 70%);
  
   &::before {
-      padding-bottom: percentage( 503 / 672 );
+      padding-bottom: percentage( 350 / 658 );
   }
 
   @media @tablet {
-    .flex(0 0 50%)
+    .flex(0 0 65%)
 
   }
 
@@ -110,17 +110,19 @@ main.interactive {
       text-align: right;
       font-size: 30px;
       position: absolute;;
-      top: 20px;
-      right: 25px;
+      top: 5px;
+      right: 15px;
 
       @media @tablet {
-        top: 10px;
-        right: 15px;
+        top: 5px;
+        right: 10px;
+        font-size: 25px;
       }
 
       @media @mobile {
-        top: 10px;
-        right: 20px;
+        top: 5px;
+        right: 10px;
+        font-size: 20px;
       }
 
       &:hover {
@@ -132,21 +134,21 @@ main.interactive {
       width: 560px;
       height: 315px;
       position: absolute;
-      top: 20%;
+      top: 8%;
       left: 8%;
 
       @media @tablet {
-        width: 290px;
-        height: 163px;
-        top: 25%;
-        left: 10%;
+        width: 420px;
+        height: 236px;
+        top: 5%;
+        left: 7%;
       }
 
       @media @mobile {
-        width: 280px;
-        height: 158px;
-        top: 25%;
-        left: 3%;
+        width: 300px;
+        height: 169px;
+        top: 8%;
+        left: 8%;
       }
     }
   }
@@ -154,12 +156,12 @@ main.interactive {
 
 .list {
   font-family: @df-sans;
-  font-size: 18px;
+  font-size: 16px;
   .flex( 0 1 30%);
   padding-left: 15px;
 
   @media @tablet {
-    .flex(0 0 50%);
+    .flex(0 0 35%);
   }
 
   @media @mobile {
@@ -186,15 +188,21 @@ main.interactive {
 
     .list-location {
       background-color: #f3771f;
-      padding: 4px;
       color: white;
       margin-right: 5px;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      display: inline-block;
+      border-radius: 100%;
     }
   }
 }
 
 .credits {
-  font-size: 15px;
+  font-size: 12px;
+  width: 100%;
   text-align: right;
   padding-top: 15px;
 }
