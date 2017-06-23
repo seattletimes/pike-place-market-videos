@@ -18,7 +18,7 @@
           <img class="backdrop" src="./assets/market-expansion.jpg">
           <div class="points">
             <% json.pikeplace.forEach(function(m) { %>
-            <div class="dot" style="left: <%= m.x %>%; top: <%= m.y %>%" data-youtube="<%= m.video %>" id="<%= m.loc %>">
+            <div class="dot" style="left: <%= m.x %>%; top: <%= m.y %>%" data-youtube="<%= m.video %>" data-id="<%= m.loc %>">
             <%= m.loc %>
             </div>
             <% }) %>
@@ -34,7 +34,7 @@
 
         <div class="list">
           <% json.pikeplace.forEach(function(m) { %>
-            <div class="list-item" data-youtube="<%= m.video %>" id="<%= m.loc %>">
+            <div class="list-item" data-youtube="<%= m.video %>" data-id="<%= m.loc %>">
             <span class="list-location"><%= m.loc %></span> <%= m.place %>
             </div>
           <% }) %>
@@ -42,7 +42,7 @@
 
         <div class="credits">
           Photo and videos by Kjell Redal / The Seattle Times
-          <br>Development by Vanessa Mart&iacute;nez / The Seattle Times
+          <br>Development by Vanessa Mart&iacute;nez and Thomas Wilburn / The Seattle Times
         </div>
       </main>
     </responsive-child>

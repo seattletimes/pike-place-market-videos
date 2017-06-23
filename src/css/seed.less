@@ -2,6 +2,15 @@
 
 @size: 20px;
 @margin: @size * -.5;
+@video-padding: 8%;
+@video-size: 100% - (@video-padding * 2);
+
+.pad-video(@top, @left) {
+  top: @top;
+  left: @left;
+  width: 100% - (@left * 2);
+  height: 100% - (@top * 2);
+}
 
 
 main.interactive {
@@ -108,19 +117,20 @@ main.interactive {
       font-family: @df-sans;
       cursor: pointer;
       text-align: right;
-      font-size: 30px;
+      font-size: 20px;
       position: absolute;;
-      top: 5px;
-      right: 15px;
+      top: 0px;
+      right: 9px;
 
       @media @tablet {
-        top: 5px;
-        right: 10px;
-        font-size: 25px;
+        top: 0px;
+        right: 9px;
+        font-size: 20px;
       }
 
       @media @mobile {
-        top: 5px;
+        color: black;
+        top: -25px;
         right: 10px;
         font-size: 20px;
       }
@@ -131,24 +141,15 @@ main.interactive {
     }
 
     .video iframe{
-      width: 560px;
-      height: 315px;
       position: absolute;
-      top: 8%;
-      left: 8%;
+      .pad-video(8%, 4%);
 
       @media @tablet {
-        width: 420px;
-        height: 236px;
-        top: 5%;
-        left: 7%;
+        .pad-video(5%, 6%);
       }
 
       @media @mobile {
-        width: 300px;
-        height: 169px;
-        top: 8%;
-        left: 8%;
+        .pad-video(0, 0);
       }
     }
   }
@@ -201,8 +202,17 @@ main.interactive {
 }
 
 .credits {
-  font-size: 12px;
+  font-size: 14px;
   width: 100%;
   text-align: right;
   padding-top: 15px;
+
+  @media @mobile {
+    font-size: 12px;
+  }
 }
+
+      .hover-dot {
+        box-shadow: 5px 5px 20px black;
+        cursor: pointer;
+      }
